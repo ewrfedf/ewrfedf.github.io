@@ -1,12 +1,9 @@
 # Dependencies
-markdown:            redcarpet
-highlighter:         pygments
+markdown:         redcarpet
+pygments:         true
 
 # Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+permalink:        /:year/:month/:day/:title
 
 # Setup
 title:               ewrfedf
