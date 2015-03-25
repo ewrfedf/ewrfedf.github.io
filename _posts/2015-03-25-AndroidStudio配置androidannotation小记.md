@@ -28,7 +28,7 @@ allprojects {
     }
 }
 
-{% endlight %}
+{% endhighlight %}
 
 2. 第二步，替换在model下build.gradle文件中的内容为以下内容：
 {% highlight xml %}
@@ -78,6 +78,6 @@ dependencies {
     compile "org.androidannotations:androidannotations-api:$AAVersion"
 }
 
-{% endligth %}
+{% endhighlight %}
 
  依赖加载成功后，重新编译项目，出现androidannotation中格式错误时，重新编译一般都可以解决。enjoy your annotation time！
