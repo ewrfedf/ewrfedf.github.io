@@ -1,0 +1,14 @@
+
+
+提交代码
+
+ git add --all
+ git commit -m "discription"
+ git push -u origin master
+
+
+恢复指定文件到某个版本
+
+git log file_name                查看指定文件的提交日志 找到 commit 版本号
+git reset commit_id file_name    恢复到指定版本号
+git commit -m "description"      提交
