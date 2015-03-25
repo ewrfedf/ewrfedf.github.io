@@ -1,5 +1,15 @@
 ---
 layout: post
+title: AndroidStudio配置androidannotation小记 
+categories:
+
+
+- android
+- java
+tags: []
+status: publish
+type: post
+published: true
 --- 
 
 1. 第一步配置apt 
