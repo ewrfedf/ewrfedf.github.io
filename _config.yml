@@ -8,7 +8,7 @@ relative_permalinks: true
 
 # Setup
 title:            ewrfedf 
-description:      'I am Android Developer. This is my personal blog,some are orgin , some are tranlation. Also I am from cn'
+description:      'I am Android Developer. This is my personal blog,some are orgin , some are translation. Also I am from cn'
 url:              http://ewrfedf.github.io 
 baseurl:          /
 logo:             /content/images/me.jpg
