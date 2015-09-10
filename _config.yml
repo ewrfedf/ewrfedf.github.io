@@ -23,7 +23,7 @@ paginate:         5
 disqus_shortname: ewrfedf 
 
 github:
-  repo:           https://github.com/ewrfedf 
+  repo:           http://github.com/ewrfedf 
 
 gems:
   - jekyll-sitemap
