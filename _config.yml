@@ -1,23 +1,34 @@
 # Dependencies
-markdown:         redcarpet
-pygments:         true
+markdown:         kramdown
+highlighter:      pygments
 
 # Permalinks
-permalink:        /:year/:month/:day/:title
+permalink:        pretty
+relative_permalinks: true
 
 # Setup
-title:               ewrfedf
-tagline:             'Android Dev'
-description:         '<a href="http://ewrfedf.github.io/" target="_blank">Android Dev</a>.'
-url:                 http://ewrfedf.github.io/
-baseurl:             /
-paginate:            5
+title:            Chris Banes
+description:      'I work as a DPE in the Android Developer Relations team. This is my personal blog and any views expressed here are mine, and not my employers.'
+url:              http://chris.banes.me
+baseurl:          /
+logo:             /content/images/me.jpg
 
-# About/contact
 author:
-  name:              ewrfedf
-  url:               http://ewrfedf.github.io/
-  email:             zhengcp9@gmail.com
+  name:           'Chris Banes'
+  url:            https://plus.google.com/+ChrisBanes
 
-# Custom vars
-version:             1.0.0
+paginate:         5
+
+disqus_shortname: chrisbanes
+
+github:
+  repo:           https://github.com/chrisbanes/chrisbanes.github.io
+
+gems:
+  - jekyll-sitemap
+
+twitter: '@chrisbanes'
+
+kramdown:
+  # Enable GitHub Flavored Markdown (fenced code blocks)
+  input: GFM

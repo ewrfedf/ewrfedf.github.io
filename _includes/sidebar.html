@@ -1,36 +1,93 @@
-<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
-     styles, `#sidebar-checkbox` for behavior. -->
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+        
+      <a href="{{ site.baseurl }}" title="Link to homepage for {{ site.title }}"><img src="{{ site.logo }}" width="80" alt="{{ site.title }} logo" class="panel-cover__logo logo" /></a>
+        
+      <h1>
+        <a href="{{ site.baseurl }}">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
 
-<!-- Toggleable sidebar -->
-<div class="sidebar" id="sidebar">
-  <div class="sidebar-item">
-    <p>{{ site.description }}</p>
-  </div>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
 
-    {% comment %}
-      The code below dynamically generates a sidebar nav of pages with
-      `layout: page` in the front-matter. See readme for usage.
-    {% endcomment %}
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}{% if node.layout == "page" %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+        {% endif %}{% endif %}
+      {% endfor %}
+      
+          </nav>
+     
+      
+      <nav class="sidebar-social">
+  <ul class="navigation">
 
-    {% assign pages_list = site.pages | sort:"url" %}
-    {% for node in pages_list %}
-      {% if node.title != null %}
-        {% if node.layout == "page" %}
-          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
- 
-    <a class="sidebar-nav-item" href="https://github.com/ewrfedf">GitHub project</a> 
-  </nav>
 
-  <div class="sidebar-item">
-    <p>
-      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
-    </p>
+  <!-- Twitter -->
+  <li class="social-item twitter">
+    <a href="http://twitter.com/{{ site.twitter }}" title="{{ site.twitter }} on Twitter" target="_blank">
+      <i class='icon fi-social-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+
+  <!-- Google+ -->
+  <li class="social-item gplus">
+    <a href="http://plus.google.com/103829716466878605055?rel=author" title="+ChrisBanes" target="_blank">
+      <i class='icon fi-social-google-plus'></i>
+      <span class="label">Google+</span>
+    </a>
+  </li>
+
+  <!-- GitHub -->
+  <li class="social-item github">
+    <a href="http://github.com/chrisbanes" title="@chrisbanes on GitHub" target="_blank">
+      <i class='icon fi-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+  
+  <!-- StackOverflow -->
+  <li class="social-item stackoverflow">
+    <a href="http://stackoverflow.com/users/474997/chris-banes" title="Chris Banes on StackOverflow" target="_blank">
+      <i class='icon fi-social-stack-overflow'></i>
+      <span class="label">StackOverflow</span>
+    </a>
+  </li>
+
+  <!-- Foursquare -->
+  <li class="social-item foursquare">
+    <a href="http://foursquare.com/chrisbanes" title="Chris Banes on foursquare" target="_blank">
+      <i class='icon fi-social-foursquare'></i>
+      <span class="label">foursquare</span>
+    </a>
+  </li>
+
+    <!-- LinkedIn -->
+    <li class="social-item linkedin">
+      <a href="http://uk.linkedin.com/in/chrisbanes/" title="Chris Banes on LinkedIn" target="_blank">
+        <i class='icon fi-social-linkedin'></i>
+        <span class="label">LinkedIn</span>
+      </a>
+    </li>
+
+  </ul>
+</nav>
+      
+      
+      
+
+
   </div>
 </div>
