@@ -7,22 +7,23 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Chris Banes
-description:      'I work as a DPE in the Android Developer Relations team. This is my personal blog and any views expressed here are mine, and not my employers.'
-url:              http://chris.banes.me
+title:            ewrfedf 
+description:      'I am Android Developer. This is my personal blog,some are orgin , some are tranlation. Also I'm from cn'
+url:              http://ewrfedf.github.io 
 baseurl:          /
 logo:             /content/images/me.jpg
 
 author:
-  name:           'Chris Banes'
-  url:            https://plus.google.com/+ChrisBanes
+  name:           'ewerfedf'
+  url:            http://ewrfedf.github.io 
+ 
 
 paginate:         5
 
-disqus_shortname: chrisbanes
+disqus_shortname: ewrfedf 
 
 github:
-  repo:           https://github.com/chrisbanes/chrisbanes.github.io
+  repo:           https://github.com/ewrfedf 
 
 gems:
   - jekyll-sitemap
