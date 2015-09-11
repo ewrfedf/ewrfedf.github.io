@@ -28,7 +28,6 @@ github:
 gems:
   - jekyll-sitemap
 
-twitter: '@chrisbanes'
 
 kramdown:
   # Enable GitHub Flavored Markdown (fenced code blocks)
