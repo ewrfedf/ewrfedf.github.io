@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<!--
+    This configuration file was written by the eclipse-cs plugin configuration editor
+-->
+<!--
+    Checkstyle-Configuration: My_check
+    Description: 
+java代码检查规则，使用eclipse插件检查．(插件官方地址 http://eclipse-cs.sourceforge.net/update/)
+-->
+<module name="Checker">
+  <property name="severity" value="warning"/>
+  <module name="TreeWalker">
+    <module name="MissingOverride">
+      <metadata name="net.sf.eclipsecs.core.comment" value="需要＠override注解"/>
+      <property name="severity" value="info"/>
+      <property name="id" value="001"/>
+    </module>
+    <module name="JavadocMethod">
+      <metadata name="net.sf.eclipsecs.core.comment" value="非私有方法需要文档注释．解释方法意义"/>
+      <property name="severity" value="warning"/>
+      <property name="scope" value="public"/>
+      <property name="excludeScope" value="private"/>
+      <property name="allowMissingThrowsTags" value="true"/>
+      <property name="allowMissingReturnTag" value="true"/>
+      <property name="suppressLoadErrors" value="true"/>
+      <message key="javadoc.missing" value="非私有方法需要文档注释．解释方法意义."/>
+    </module>
+    <module name="UnusedImports">
+      <property name="severity" value="info"/>
+      <message key="import.unused" value="没用的import - {0}."/>
+    </module>
+    <module name="ConstantName">
+      <metadata name="net.sf.eclipsecs.core.comment" value="常量需要大写下划线连接．"/>
+      <property name="severity" value="warning"/>
+      <message key="name.invalidPattern" value="Name ''{0}'' must match pattern ''{1}''.常量需要大写下划线连接．"/>
+    </module>
+    <module name="LocalVariableName">
+      <metadata name="net.sf.eclipsecs.core.comment" value="小写开头"/>
+      <property name="severity" value="info"/>
+    </module>
+    <module name="MemberName">
+      <metadata name="net.sf.eclipsecs.core.comment" value="私有的成员变量以ｍ＋大写字母连接．如mContext"/>
+      <property name="severity" value="info"/>
+      <property name="applyToPublic" value="false"/>
+      <property name="applyToProtected" value="false"/>
+      <property name="applyToPackage" value="false"/>
+      <property name="format" value="^m[A-Z][a-zA-Z0-9]*$"/>
+    </module>
+    <module name="JavadocType">
+      <metadata name="net.sf.eclipsecs.core.comment" value="类型需要文档注释"/>
+      <property name="severity" value="warning"/>
+      <message key="javadoc.missing" value="类型需要文档注释．"/>
+    </module>
+    <module name="LineLength">
+      <property name="severity" value="warning"/>
+      <property name="max" value="150"/>
+      <message key="maxLineLen" value="一行不超过 {0,number,integer}个字符 (现在是 {1,number,integer}个)."/>
+    </module>
+    <module name="MethodLength">
+      <metadata name="net.sf.eclipsecs.core.comment" value="方法行数不能太冗长"/>
+      <property name="severity" value="warning"/>
+      <property name="max" value="300"/>
+      <message key="maxLen.method" value="方法行数不能太冗长．Method length is {0,number,integer} lines (max allowed is {1,number,integer})."/>
+    </module>
+    <module name="ParameterNumber">
+      <metadata name="net.sf.eclipsecs.core.comment" value="方法参数太多，请重构．"/>
+      <property name="severity" value="warning"/>
+      <message key="maxParam" value="方法参数太多，请重构．最多允许{0,number,integer}个参数 (found {1,number,integer})."/>
+    </module>
+    <module name="Indentation">
+      <metadata name="net.sf.eclipsecs.core.comment" value="用４个空格代替ｔａｂ"/>
+      <property name="severity" value="info"/>
+    </module>
+    <module name="NestedIfDepth">
+      <metadata name="net.sf.eclipsecs.core.comment" value="最多４层嵌套"/>
+      <property name="severity" value="warning"/>
+      <property name="max" value="4"/>
+    </module>
+    <module name="TodoComment">
+      <metadata name="net.sf.eclipsecs.core.comment" value="去掉自动生成的TODO．保留自己的TODO"/>
+      <property name="format" value="TODO Auto"/>
+    </module>
+    <module name="MemberName">
+      <metadata name="net.sf.eclipsecs.core.comment" value="非私有的就驼峰命名"/>
+      <property name="applyToPrivate" value="false"/>
+    </module>
+    <module name="MethodName">
+      <property name="severity" value="info"/>
+    </module>
+    <module name="PackageName"/>
+    <module name="StaticVariableName"/>
+    <module name="TypeName">
+      <metadata name="net.sf.eclipsecs.core.comment" value="类名接口名都是大写开头"/>
+      <property name="severity" value="warning"/>
+    </module>
+    <module name="LocalFinalVariableName"/>
+    <module name="MethodTypeParameterName">
+      <metadata name="net.sf.eclipsecs.core.comment" value="泛型参数"/>
+      <property name="format" value="^[A-Z][a-zA-Z]*$"/>
+      <message key="name.invalidPattern" value="泛型参数''{0}'' must match pattern ''{1}''."/>
+    </module>
+    <module name="ClassTypeParameterName">
+      <metadata name="net.sf.eclipsecs.core.comment" value="泛型参数"/>
+      <property name="format" value="^[A-Z][a-zA-Z]*$"/>
+      <message key="name.invalidPattern" value="泛型参数 '{0}'' must match pattern ''{1}''."/>
+    </module>
+    <module name="LeftCurly">
+      <metadata name="net.sf.eclipsecs.core.comment" value="左括号放在行末"/>
+    </module>
+    <module name="NeedBraces">
+      <metadata name="net.sf.eclipsecs.core.comment" value="即使一行也加｛｝"/>
+      <property name="severity" value="info"/>
+      <message key="needBraces" value="''{0}'' 必须使用 '''{}'''s."/>
+    </module>
+    <module name="EqualsAvoidNull">
+      <metadata name="net.sf.eclipsecs.core.comment" value="equals 避免空指针"/>
+      <property name="severity" value="info"/>
+      <message key="equals.avoid.null" value="字符串表达式，避免出现空指针"/>
+    </module>
+    <module name="MagicNumber">
+      <metadata name="net.sf.eclipsecs.core.comment" value="magic number 避免费解的代码"/>
+      <property name="severity" value="info"/>
+      <property name="ignoreNumbers" value="-1, 0, 1, 2, 3,360,100"/>
+      <message key="magic.number" value="''{0}'' is a magic number.这些数字容易让人费解，建议预定义　如: final int radius = {0};"/>
+    </module>
+    <module name="SimplifyBooleanReturn">
+      <metadata name="net.sf.eclipsecs.core.comment" value="返回代码应更清晰"/>
+      <message key="simplify.boolreturn" value="Conditional logic can be removed.返回代码可以更清晰．"/>
+    </module>
+    <module name="OuterTypeFilename">
+      <metadata name="net.sf.eclipsecs.core.comment" value="最外面的类名和文件名一致"/>
+    </module>
+  </module>
+  <module name="FileLength">
+    <metadata name="net.sf.eclipsecs.core.comment" value="文件长度不超过1500行"/>
+    <property name="severity" value="error"/>
+    <property name="max" value="1500"/>
+    <message key="maxLen.file" value="当前文件长度 {0,number,integer} lines (文件长度不超过{1,number,integer}行)."/>
+  </module>
+  <module name="StrictDuplicateCode">
+    <metadata name="net.sf.eclipsecs.core.comment" value="检测重复代码"/>
+  </module>
+  <module name="UniqueProperties"/>
+</module>
