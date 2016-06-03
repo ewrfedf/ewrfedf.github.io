@@ -372,10 +372,10 @@ a.sidebar-nav-item:focus {
   border-bottom-left-radius: 4px; }
 
 .post-overlay-header a {
-  color: #FFF;
+  color: rgba(255, 255,255, 0.92);
 }
 .post-overlay-header a:hover, a:focus {
-  color: #CCC; }
+  color: #FFF; }
 
 .post-overlay-header .post-date {
   color: #DDDDDD;

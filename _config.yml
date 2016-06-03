@@ -4,30 +4,29 @@ highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
 
 # Setup
-title:            ewrfedf 
-description:      'I am Android Developer. This is my personal blog,some are orgin , some are translation. Also I am from cn'
-url:              http://ewrfedf.github.io 
+title:            Chris Banes
+description:      'I work as a DPE in the Android Developer Relations team. This is my personal blog and any views expressed here are mine, and not my employers.'
+url:              http://chris.banes.me
 baseurl:          /
 logo:             /content/images/me.jpg
 
 author:
-  name:           'ewerfedf'
-  url:            http://ewrfedf.github.io 
- 
+  name:           'Chris Banes'
+  url:            https://plus.google.com/+ChrisBanes
 
 paginate:         5
 
-disqus_shortname: ewrfedf 
+disqus_shortname: chrisbanes
 
 github:
-  repo:           http://github.com/ewrfedf 
+  repo:           https://github.com/chrisbanes/chrisbanes.github.io
 
 gems:
   - jekyll-sitemap
 
+twitter: '@chrisbanes'
 
 kramdown:
   # Enable GitHub Flavored Markdown (fenced code blocks)
