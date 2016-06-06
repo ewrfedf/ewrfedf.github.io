@@ -1,6 +1,6 @@
-# Jenkins Cannot run program "gradle"error=2, No such file or directory
-
-
+---
+layout: post 
+---
 
 #### [1. 问题详细描述](1)
 
